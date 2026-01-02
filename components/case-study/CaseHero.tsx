@@ -9,7 +9,7 @@ export default function CaseHero({ cs }: { cs: CaseStudy }) {
   const poster = cs.heroPoster; // optional
 
   // Fallback aspect ratio until metadata loads (or set per-case via cs.heroAspect: "9/16" | "16/9")
-  const defaultAspect = cs.heroAspect ?? "16/9";
+  const defaultAspect = cs.heroPoster ?? "16/9";
   const [aspect, setAspect] = useState<string>(defaultAspect);
 
   function onLoadedMeta(e: React.SyntheticEvent<HTMLVideoElement>) {
